@@ -1,0 +1,23 @@
+START
+    PUSHI 0
+    PUSHI 0
+    STOREG 0
+l10:
+    PUSHG 0
+    PUSHI 1
+    ADD
+    STOREG 0
+    PUSHG 0
+    PUSHI 5
+    INF
+    JZ ifelse1
+    JUMP l10
+    JUMP ifend2
+ifelse1:
+ifend2:
+    PUSHS "Contagem final: "
+    WRITES
+    PUSHG 0
+    WRITEI
+    WRITELN
+STOP

@@ -1,0 +1,18 @@
+START
+    PUSHI 0
+    PUSHI 2026
+    STOREG 0
+    PUSHS "Projeto de PL"
+    WRITES
+    WRITELN
+    PUSHS "Ano letivo: "
+    WRITES
+    PUSHG 0
+    WRITEI
+    WRITELN
+    PUSHS "Linguagem: "
+    WRITES
+    PUSHS "Fortran 77"
+    WRITES
+    WRITELN
+STOP

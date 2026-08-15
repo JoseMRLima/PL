@@ -1,0 +1,53 @@
+START
+    PUSHI 0
+    PUSHI 3
+    STOREG 0
+    PUSHG 0
+    PUSHA kenobi
+    CALL
+    POP 1
+    PUSHG 0
+    PUSHA vader
+    CALL
+    POP 1
+STOP
+kenobi:
+    PUSHI 0
+    PUSHI 1
+    STOREL 0
+dostart1:
+    PUSHL 0
+    PUSHL -1
+    INFEQ
+    JZ doend2
+    PUSHS "Hello there!"
+    WRITES
+    WRITELN
+    PUSHL 0
+    PUSHI 1
+    ADD
+    STOREL 0
+    JUMP dostart1
+doend2:
+    POP 1
+    RETURN
+vader:
+    PUSHI 0
+    PUSHI 1
+    STOREL 0
+dostart3:
+    PUSHL 0
+    PUSHL -1
+    INFEQ
+    JZ doend4
+    PUSHS "i am your father"
+    WRITES
+    WRITELN
+    PUSHL 0
+    PUSHI 1
+    ADD
+    STOREL 0
+    JUMP dostart3
+doend4:
+    POP 1
+    RETURN

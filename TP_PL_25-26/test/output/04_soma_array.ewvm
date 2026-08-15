@@ -1,0 +1,50 @@
+START
+    PUSHN 5
+    PUSHI 0
+    PUSHI 0
+    PUSHI 0
+    STOREG 6
+    PUSHS "Introduza 5 numeros inteiros:"
+    WRITES
+    WRITELN
+    PUSHI 1
+    STOREG 5
+dostart1:
+    PUSHG 5
+    PUSHI 5
+    INFEQ
+    JZ doend2
+    READ
+    ATOI
+    PUSHGP
+    PUSHI 0
+    PADD
+    PUSHG 5
+    PUSHI 1
+    SUB
+    PADD
+    SWAP
+    STORE 0
+    PUSHG 6
+    PUSHGP
+    PUSHI 0
+    PADD
+    PUSHG 5
+    PUSHI 1
+    SUB
+    PADD
+    LOAD 0
+    ADD
+    STOREG 6
+    PUSHG 5
+    PUSHI 1
+    ADD
+    STOREG 5
+    JUMP dostart1
+doend2:
+    PUSHS "A soma dos numeros e: "
+    WRITES
+    PUSHG 6
+    WRITEI
+    WRITELN
+STOP

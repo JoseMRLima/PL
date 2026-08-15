@@ -1,0 +1,36 @@
+START
+    PUSHI 0
+    PUSHI 42
+    STOREG 0
+    PUSHG 0
+    PUSHI 42
+    EQUAL
+    JZ ifelse1
+    PUSHS "X e 42"
+    WRITES
+    WRITELN
+    JUMP ifend2
+ifelse1:
+ifend2:
+    PUSHG 0
+    PUSHI 0
+    EQUAL
+    NOT
+    JZ ifelse3
+    PUSHS "X nao e zero"
+    WRITES
+    WRITELN
+    JUMP ifend4
+ifelse3:
+ifend4:
+    PUSHG 0
+    PUSHI 100
+    SUP
+    JZ ifelse5
+    PUSHS "Isto nao aparece"
+    WRITES
+    WRITELN
+    JUMP ifend6
+ifelse5:
+ifend6:
+STOP

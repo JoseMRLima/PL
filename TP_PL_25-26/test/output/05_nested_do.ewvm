@@ -1,0 +1,43 @@
+START
+    PUSHI 0
+    PUSHI 0
+    PUSHI 1
+    STOREG 0
+dostart1:
+    PUSHG 0
+    PUSHI 3
+    INFEQ
+    JZ doend2
+    PUSHI 1
+    STOREG 1
+dostart3:
+    PUSHG 1
+    PUSHI 3
+    INFEQ
+    JZ doend4
+    PUSHG 0
+    WRITEI
+    PUSHS " x "
+    WRITES
+    PUSHG 1
+    WRITEI
+    PUSHS " = "
+    WRITES
+    PUSHG 0
+    PUSHG 1
+    MUL
+    WRITEI
+    WRITELN
+    PUSHG 1
+    PUSHI 1
+    ADD
+    STOREG 1
+    JUMP dostart3
+doend4:
+    PUSHG 0
+    PUSHI 1
+    ADD
+    STOREG 0
+    JUMP dostart1
+doend2:
+STOP

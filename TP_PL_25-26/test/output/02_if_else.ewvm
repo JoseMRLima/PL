@@ -1,0 +1,28 @@
+START
+    PUSHI 0
+    PUSHI 15
+    STOREG 0
+    PUSHG 0
+    PUSHI 10
+    SUP
+    JZ ifelse1
+    PUSHS "X e maior que 10"
+    WRITES
+    WRITELN
+    JUMP ifend2
+ifelse1:
+    PUSHS "X e menor ou igual a 10"
+    WRITES
+    WRITELN
+ifend2:
+    PUSHG 0
+    PUSHI 15
+    EQUAL
+    JZ ifelse3
+    PUSHS "X e igual a 15"
+    WRITES
+    WRITELN
+    JUMP ifend4
+ifelse3:
+ifend4:
+STOP

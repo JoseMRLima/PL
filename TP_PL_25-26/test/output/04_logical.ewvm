@@ -1,0 +1,45 @@
+START
+    PUSHI 0
+    PUSHI 0
+    PUSHI 0
+    PUSHI 1
+    STOREG 0
+    PUSHI 0
+    STOREG 1
+    PUSHG 0
+    PUSHG 1
+    AND
+    STOREG 2
+    PUSHG 2
+    JZ ifelse1
+    PUSHS "TRUE AND FALSE = TRUE"
+    WRITES
+    WRITELN
+    JUMP ifend2
+ifelse1:
+    PUSHS "TRUE AND FALSE = FALSE"
+    WRITES
+    WRITELN
+ifend2:
+    PUSHG 0
+    PUSHG 1
+    OR
+    STOREG 2
+    PUSHG 2
+    JZ ifelse3
+    PUSHS "TRUE OR FALSE = TRUE"
+    WRITES
+    WRITELN
+    JUMP ifend4
+ifelse3:
+ifend4:
+    PUSHG 1
+    NOT
+    JZ ifelse5
+    PUSHS "NOT FALSE = TRUE"
+    WRITES
+    WRITELN
+    JUMP ifend6
+ifelse5:
+ifend6:
+STOP
