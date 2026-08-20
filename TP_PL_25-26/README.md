@@ -1,5 +1,7 @@
 # Trabalho Prático PL 2025/2026
 
+**Nota:** 17
+
 Trabalho Prático de **Processamento de Linguagens** do ano letivo 2025/2026.
 
 ## 📘 Descrição Geral
@@ -73,3 +75,4 @@ Constituintes do grupo de trabalho:
 | Eduardo Freitas Fernandes | a106919 |
 | Gonçalo Rodrigues Ribeiro | a106842 |
 | José Mário Raimundo Lima  | a106888 |
+
